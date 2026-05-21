@@ -1,0 +1,265 @@
+.document-viewer {
+  margin-left: 280px;
+  flex: 1;
+  height: 100vh;
+  width: 100%;
+  background-color: #ffffff;
+  transition: margin-left 0.3s ease;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.document-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 3rem 2rem;
+}
+
+.document-header {
+  margin-bottom: 3rem;
+}
+
+.document-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin: 0 0 1rem 0;
+  line-height: 1.2;
+  letter-spacing: -0.5px;
+}
+
+.document-divider {
+  height: 3px;
+  width: 60px;
+  background: linear-gradient(90deg, #3b82f6 0%, #2563eb 100%);
+  border-radius: 2px;
+  margin-bottom: 2rem;
+}
+
+.document-loading,
+.document-error,
+.document-empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 400px;
+  color: #64748b;
+  font-size: 1.1rem;
+}
+
+.document-error {
+  color: #dc2626;
+  background: #fef2f2;
+  border-left: 4px solid #dc2626;
+  padding: 2rem;
+  border-radius: 0.5rem;
+}
+
+.document-content {
+  line-height: 1.8;
+}
+
+/* Markdown Styling */
+
+.markdown-h1,
+.markdown-h2,
+.markdown-h3,
+.markdown-h4 {
+  color: #1e293b;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.markdown-h1 {
+  font-size: 2rem;
+  line-height: 1.3;
+  border-bottom: 2px solid #e2e8f0;
+  padding-bottom: 0.5rem;
+}
+
+.markdown-h2 {
+  font-size: 1.5rem;
+  line-height: 1.4;
+  color: #2563eb;
+}
+
+.markdown-h3 {
+  font-size: 1.25rem;
+  line-height: 1.4;
+  color: #334155;
+}
+
+.markdown-h4 {
+  font-size: 1.1rem;
+  color: #475569;
+}
+
+.markdown-p {
+  margin: 1rem 0;
+  color: #334155;
+  font-size: 1rem;
+}
+
+.markdown-ul,
+.markdown-ol {
+  margin: 1.5rem 0;
+  padding-left: 2rem;
+}
+
+.markdown-li {
+  margin: 0.5rem 0;
+  color: #334155;
+}
+
+.markdown-blockquote {
+  border-left: 4px solid #3b82f6;
+  padding: 1rem 1.5rem;
+  margin: 1.5rem 0;
+  background: #f0f4ff;
+  border-radius: 0.375rem;
+  color: #2563eb;
+  font-style: italic;
+}
+
+.markdown-code-inline {
+  background: #f1f5f9;
+  color: #dc2626;
+  padding: 0.2rem 0.4rem;
+  border-radius: 0.25rem;
+  font-family: 'Courier New', monospace;
+  font-size: 0.9em;
+}
+
+.markdown-pre {
+  background: #1e293b;
+  color: #e2e8f0;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  overflow-x: auto;
+  margin: 1.5rem 0;
+}
+
+.markdown-code-block {
+  font-family: 'Courier New', monospace;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.markdown-link {
+  color: #3b82f6;
+  text-decoration: none;
+  border-bottom: 1px solid #bfdbfe;
+  transition: all 0.2s ease;
+}
+
+.markdown-link:hover {
+  color: #2563eb;
+  border-bottom-color: #3b82f6;
+}
+
+.markdown-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+.markdown-thead {
+  background: #f8fafc;
+  border-bottom: 2px solid #cbd5e1;
+}
+
+.markdown-th {
+  padding: 1rem;
+  text-align: left;
+  font-weight: 600;
+  color: #1e293b;
+  border-right: 1px solid #e2e8f0;
+}
+
+.markdown-th:last-child {
+  border-right: none;
+}
+
+.markdown-td {
+  padding: 0.75rem 1rem;
+  border-right: 1px solid #e2e8f0;
+  color: #334155;
+}
+
+.markdown-td:last-child {
+  border-right: none;
+}
+
+.markdown-tbody tr:hover {
+  background: #f8fafc;
+}
+
+/* Mobile Responsive */
+@media (max-width: 1024px) {
+  .document-viewer {
+    margin-left: 0;
+    padding-top: 3.5rem;
+  }
+
+  .document-container {
+    padding: 2rem 1.5rem;
+  }
+
+  .document-title {
+    font-size: 1.875rem;
+  }
+
+  .markdown-h1 {
+    font-size: 1.5rem;
+  }
+
+  .markdown-h2 {
+    font-size: 1.25rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .document-container {
+    padding: 1.5rem 1rem;
+  }
+
+  .document-title {
+    font-size: 1.5rem;
+  }
+
+  .markdown-pre {
+    padding: 1rem;
+    font-size: 0.8rem;
+  }
+
+  .markdown-table {
+    font-size: 0.9rem;
+  }
+
+  .markdown-th,
+  .markdown-td {
+    padding: 0.5rem;
+  }
+}
+
+/* Scrollbar Styling */
+.document-viewer::-webkit-scrollbar {
+  width: 8px;
+}
+
+.document-viewer::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+.document-viewer::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+
+.document-viewer::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
