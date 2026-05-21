@@ -126,3 +126,206 @@ Estructura obligatoria del análisis:
 
 **6. Consulta de sintaxis Markdown**
 Genera una lista con las sintaxis basicas y mas comunes de markdown 
+
+# Modificacion del proyecto
+1. Peticion a chatgpt para redactar promp para que copilot modifique el proyecto
+La parte del informe esta lista, lo siguiente es desarrollar la paguina web con react vite y estilizada con Tailwind CSS.
+genera instrucciones para github copilot para modificar el archivo App.jsx creando una aplicacion web que muestre el informe ultizando como fuente de informacion los archivos en la carpeta docs_gonmau(exepto el archivo .md 08_promps_gonmau.md), genera un archivo JSON para indicar la estructura de la pagina. Explica detalladamente todo lo que debe instalar en caso de no estar ya instalado antes de modificar.
+arquitectura del codigo:
+INFORME_GONMAU/
+├── docs_gonmau/
+│   ├── 01_resumen_gonmau.md
+│   ├── 02_marco_gonmau.md
+│   ├── 03_delitos_gonmau.md
+│   ├── 04_comparacion_gonmau.md
+│   ├── 05_responsabilidades_gonmau.md
+│   ├── 06_datos_gonmau.md
+│   ├── 07_conclusiones_gonmau.md
+│   └── 08_promps_gonmau.md
+│
+├── node_modules/
+├── public/
+├── src/
+│   ├── assets/
+│   ├── App.css
+│   ├── App.jsx
+│   ├── index.css
+│   └── main.jsx
+│
+├── .gitignore
+├── AGENTS.md
+├── eslint.config.js
+├── index.html
+├── package-lock.json
+├── package.json
+├── postcss.config.js
+├── README.md
+├── tailwind.config.js
+└── vite.config.js
+
+2. Primer iteracion de modificar la pagina web de react por defecto a informe del ataque a Sony
+/*
+INSTRUCCIONES PARA COPILOT:
+
+Objetivo:
+Crear una aplicación web en React (Vite) que funcione como visor de informe académico de ciberseguridad.
+
+Reglas:
+
+Usar Tailwind CSS para toda la estilización.
+La aplicación debe leer archivos .md ubicados en:
+/docs_gonmau/
+EXCLUIR el archivo:
+08_promps_gonmau.md
+Usar react-markdown para renderizar contenido Markdown.
+No hardcodear el contenido del informe en el JSX.
+Cada archivo representa una sección del informe.
+Estructura esperada:
+
+Sidebar con navegación (lista de secciones)
+Área principal donde se muestra el contenido del archivo seleccionado
+Diseño tipo dashboard académico
+Secciones:
+01_resumen_gonmau.md
+02_marco_gonmau.md
+03_delitos_gonmau.md
+04_comparacion_gonmau.md
+05_responsabilidades_gonmau.md
+06_datos_gonmau.md
+07_conclusiones_gonmau.md
+
+Comportamiento:
+
+Al iniciar, cargar automáticamente "01_resumen_gonmau.md"
+Al hacer click en una sección del sidebar, cambiar contenido
+Mostrar título derivado del nombre del archivo
+Mantener diseño limpio, académico y responsivo
+UX/UI:
+
+Sidebar fijo en desktop
+Colapsable en móvil
+Fondo claro con acentos azules/grises
+Tipografía legible estilo documento académico
+Componentización sugerida:
+
+Sidebar.jsx
+DocumentViewer.jsx
+useDocs hook para cargar markdown
+*/
+{
+"app": "InformeGonmau",
+"theme": "academic-light",
+"layout": {
+"type": "dashboard",
+"sidebar": {
+"position": "left",
+"width": "280px",
+"collapsible": true
+},
+"content": {
+"type": "markdown-viewer",
+"scroll": true
+}
+},
+"docs": {
+"basePath": "/docs_gonmau/",
+"exclude": ["08_promps_gonmau.md"],
+"files": [
+{
+"id": "resumen",
+"file": "01_resumen_gonmau.md",
+"title": "Resumen del Caso"
+},
+{
+"id": "marco",
+"file": "02_marco_gonmau.md",
+"title": "Marco Normativo"
+},
+{
+"id": "delitos",
+"file": "03_delitos_gonmau.md",
+"title": "Tipificación de Delitos"
+},
+{
+"id": "comparacion",
+"file": "04_comparacion_gonmau.md",
+"title": "Comparación Regulatoria"
+},
+{
+"id": "responsabilidades",
+"file": "05_responsabilidades_gonmau.md",
+"title": "Responsabilidades Legales"
+},
+{
+"id": "datos",
+"file": "06_datos_gonmau.md",
+"title": "Tratamiento de Datos"
+},
+{
+"id": "conclusiones",
+"file": "07_conclusiones_gonmau.md",
+"title": "Conclusiones"
+}
+]
+}
+}
+{
+  "app": "InformeGonmau",
+  "theme": "academic-light",
+  "layout": {
+    "type": "dashboard",
+    "sidebar": {
+      "position": "left",
+      "width": "280px",
+      "collapsible": true
+    },
+    "content": {
+      "type": "markdown-viewer",
+      "scroll": true
+    }
+  },
+  "docs": {
+    "basePath": "/docs_gonmau/",
+    "exclude": ["08_promps_gonmau.md"],
+    "files": [
+      {
+        "id": "resumen",
+        "file": "01_resumen_gonmau.md",
+        "title": "Resumen del Caso"
+      },
+      {
+        "id": "marco",
+        "file": "02_marco_gonmau.md",
+        "title": "Marco Normativo"
+      },
+      {
+        "id": "delitos",
+        "file": "03_delitos_gonmau.md",
+        "title": "Tipificación de Delitos"
+      },
+      {
+        "id": "comparacion",
+        "file": "04_comparacion_gonmau.md",
+        "title": "Comparación Regulatoria"
+      },
+      {
+        "id": "responsabilidades",
+        "file": "05_responsabilidades_gonmau.md",
+        "title": "Responsabilidades Legales"
+      },
+      {
+        "id": "datos",
+        "file": "06_datos_gonmau.md",
+        "title": "Tratamiento de Datos"
+      },
+      {
+        "id": "conclusiones",
+        "file": "07_conclusiones_gonmau.md",
+        "title": "Conclusiones"
+      }
+    ]
+  }
+}
+
+3. Intento de correccion de color de fondo mal ajustado
+en el navegador abierto en VS Code el informe se ve bien, pero al abrirlo en otros navegadores (microsoft edge, chorme, Opera GX) el fondo se ve mal, como se ve en la imagen no se llena todo el fondo de blanco y si bajo esta todo con azul
