@@ -28,6 +28,7 @@ export function DocumentViewer({ fileName, title }) {
         {content && !loading && (
           <div className="document-content">
             <ReactMarkdown
+              allowHtml={true}
               components={{
                 h1: ({ node, ...props }) => <h1 className="markdown-h1" {...props} />,
                 h2: ({ node, ...props }) => <h2 className="markdown-h2" {...props} />,

@@ -15,7 +15,7 @@ export function useDocs(fileName) {
     setError(null);
 
     // Dynamically import markdown files
-    import(`../../docs_gonmau/${fileName}?raw`)
+    import(/* @vite-ignore */`../../docs_gonmau/${fileName}?raw`)
       .then((module) => {
         setContent(module.default);
         setLoading(false);

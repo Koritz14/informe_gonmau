@@ -1,12 +1,59 @@
 ## Comparación de marcos regulatorios aplicables
 
-| Marco regulatorio | Alcance | Jurisdicción | Sanciones | Sujetos regulados | Aplicabilidad al caso Sony |
-|---|---|---|---|---|---
-| Ley 21.459 | Delitos informáticos y protección de sistemas | Chile | Penas privativas de libertad y multas | Personas naturales responsables de delitos informáticos | Alta aplicabilidad para tipificar acceso ilícito y sabotaje |
-| Ley 19.628 | Tratamiento y protección de datos personales | Chile | Responsabilidad civil y sanciones asociadas | Organizaciones que procesan datos personales | Aplicable por filtración de datos de empleados |
-| Convenio de Budapest | Cooperación internacional y ciberdelitos | Internacional | Depende de legislación interna de cada Estado | Estados adherentes e investigadores | Relevante por carácter transnacional del ataque |
-| NIST Cybersecurity Framework | Gestión de riesgos y controles de seguridad | Referencia internacional | No establece sanciones penales | Organizaciones públicas y privadas | Útil para evaluar fallas preventivas y respuesta |
-| CISA Guidance | Recomendaciones técnicas y resiliencia | Estados Unidos / referencia internacional | No posee sanciones directas | Infraestructura crítica y organizaciones | Relevante para mitigación de malware destructivo |
+<table>
+  <thead>
+    <tr>
+      <th>Marco regulatorio</th>
+      <th>Alcance</th>
+      <th>Jurisdicción</th>
+      <th>Sanciones</th>
+      <th>Sujetos regulados</th>
+      <th>Aplicabilidad al caso Sony</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Ley 21.459</strong></td>
+      <td>Delitos informáticos y protección de sistemas</td>
+      <td>Chile</td>
+      <td>Penas privativas de libertad y multas</td>
+      <td>Personas naturales responsables de delitos informáticos</td>
+      <td>Alta aplicabilidad para tipificar acceso ilícito y sabotaje</td>
+    </tr>
+    <tr>
+      <td><strong>Ley 19.628</strong></td>
+      <td>Tratamiento y protección de datos personales</td>
+      <td>Chile</td>
+      <td>Responsabilidad civil y sanciones asociadas</td>
+      <td>Organizaciones que procesan datos personales</td>
+      <td>Aplicable por filtración de datos de empleados</td>
+    </tr>
+    <tr>
+      <td><strong>Convenio de Budapest</strong></td>
+      <td>Cooperación internacional y ciberdelitos</td>
+      <td>Internacional</td>
+      <td>Depende de legislación interna de cada Estado</td>
+      <td>Estados adherentes e investigadores</td>
+      <td>Relevante por carácter transnacional del ataque</td>
+    </tr>
+    <tr>
+      <td><strong>NIST Cybersecurity Framework</strong></td>
+      <td>Gestión de riesgos y controles de seguridad</td>
+      <td>Referencia internacional</td>
+      <td>No establece sanciones penales</td>
+      <td>Organizaciones públicas y privadas</td>
+      <td>Útil para evaluar fallas preventivas y respuesta</td>
+    </tr>
+    <tr>
+      <td><strong>CISA Guidance</strong></td>
+      <td>Recomendaciones técnicas y resiliencia</td>
+      <td>Estados Unidos / referencia internacional</td>
+      <td>No posee sanciones directas</td>
+      <td>Infraestructura crítica y organizaciones</td>
+      <td>Relevante para mitigación de malware destructivo</td>
+    </tr>
+  </tbody>
+</table>
 
 **Análisis comparativo**
 
