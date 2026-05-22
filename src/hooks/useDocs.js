@@ -14,17 +14,31 @@ export function useDocs(fileName) {
     setLoading(true);
     setError(null);
 
-    // Dynamically import markdown files
-    import(/* @vite-ignore */`../../docs_gonmau/${fileName}?raw`)
-      .then((module) => {
-        setContent(module.default);
+    const loadMarkdown = async () => {
+      try {
+        console.log('Loading markdown:', fileName);
+        const fetchUrl = `/docs_gonmau/${fileName}`;
+        console.log('Fetch URL:', fetchUrl);
+
+        const response = await fetch(fetchUrl);
+
+        if (!response.ok) {
+          throw new Error(`HTTP ${response.status} - ${fileName}`);
+        }
+
+        const text = await response.text();
+        setContent(text);
         setLoading(false);
-      })
-      .catch((err) => {
-        console.error(`Error loading ${fileName}:`, err);
+        console.log('Document loaded successfully:', fileName);
+      } catch (err) {
+        console.error('Error loading markdown:', err);
         setError(`Error loading document: ${fileName}`);
+        setContent(`# Error\nNo se pudo cargar el documento: ${fileName}\n\nDetalles: ${err.message}`);
         setLoading(false);
-      });
+      }
+    };
+
+    loadMarkdown();
   }, [fileName]);
 
   return { content, loading, error };
