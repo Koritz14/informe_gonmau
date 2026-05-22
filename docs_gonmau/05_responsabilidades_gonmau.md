@@ -55,7 +55,7 @@ Podrían existir responsabilidades asociadas a:
 Sin embargo, las fuentes analizadas no identifican participación directa comprobada.
 
 | Actor      | Penal                              | Civil   | Administrativa |
-| -- | -- | -- | -- |
+| --- | --- | --- | --- |
 | Atacantes  | Sí                                 | Sí      | Posible        |
 | Empresa    | No directa como autora del ataque  | Sí      | Sí             |
 | Ejecutivos | No acreditada                      | Posible | Posible        |

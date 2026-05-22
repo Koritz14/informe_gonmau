@@ -1,4 +1,6 @@
 import ReactMarkdown from 'react-markdown';
+import rehypeRaw from 'rehype-raw';
+import remarkGfm from 'remark-gfm';
 import { useDocs } from '../hooks/useDocs';
 import './DocumentViewer.css';
 
@@ -28,7 +30,8 @@ export function DocumentViewer({ fileName, title }) {
         {content && !loading && (
           <div className="document-content">
             <ReactMarkdown
-              allowHtml={true}
+              remarkPlugins={[remarkGfm]}
+              rehypePlugins={[rehypeRaw]}
               components={{
                 h1: ({ node, ...props }) => <h1 className="markdown-h1" {...props} />,
                 h2: ({ node, ...props }) => <h2 className="markdown-h2" {...props} />,
