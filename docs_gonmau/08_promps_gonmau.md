@@ -1,4 +1,5 @@
-# Prompts para recopilación y redacción de informe
+# Promps utilizados
+## Promps para eleccion de caso y su analisis
 
 **1. Entrega de contexto y petición de casos para elegir con fuentes**
 
@@ -11,6 +12,7 @@ Tengo que hacer un informe para la asignatura de Fundamentos de la Seguridad de 
 ¿Qué rol deberías asumir para el análisis del caso?
 
 **3. Generación de instrucciones para el análisis del caso**
+
 Genera instrucciones detalladas y específicas para el análisis del caso elegido.
 
 Formato requerido del informe:
@@ -118,12 +120,13 @@ Estructura obligatoria del análisis:
 - Reflexionar sobre la importancia de la ciberseguridad y cumplimiento normativo.
 - Incluir reflexión crítica sobre prevención y gestión de incidentes.
 
-**6. Consulta de sintaxis Markdown**
-Genera una lista con las sintaxis basicas y mas comunes de markdown 
+**5. Consulta de sintaxis Markdown**
 
-# Modificacion Aplicacion Web
+Genera una lista con las sintaxis basicas y mas comunes de markdown
 
-1. Generacion de instrucciones(con chatgpt) para copilo modifique el proyecto con el informe
+## Promps para modificacion de proyecto
+
+**6. Generación de instrucciones para que Copilot modifique el proyecto**
 
 La parte del informe esta lista, lo siguiente es desarrollar la paguina web con react vite y estilizada con Tailwind CSS.
 genera instrucciones para github copilot para modificar el archivo App.jsx creando una aplicacion web que muestre el informe ultizando como fuente de informacion los archivos en la carpeta docs_gonmau(exepto el archivo .md 08_promps_gonmau.md), genera un archivo JSON para indicar la estructura de la pagina. Explica detalladamente todo lo que debe instalar en caso de no estar ya instalado antes de modificar.
@@ -159,8 +162,7 @@ INFORME_GONMAU/
 ├── tailwind.config.js
 └── vite.config.js
 
-2. Instruciones para que copilot modifique el proyecto
-**Instrucciones**
+**7. Instrucciones para que Copilot modifique el proyecto**
 /*
 INSTRUCCIONES PARA COPILOT:
 
@@ -209,7 +211,8 @@ Componentización sugerida:
 - useDocs hook para cargar markdown
 */
 
-**Estructura De la pagina**
+**8. Estructura de la página**
+
 {
   "app": "InformeGonmau",
   "theme": "academic-light",
@@ -268,14 +271,17 @@ Componentización sugerida:
   }
 }
 
-3. Arreglo de color de fondo mal ajustado
+**9. Arreglo de color de fondo mal ajustado**
 
 en el navegador abierto en VS Code el informe se ve bien, pero al abrirlo en otros navegadores (microsoft edge, chorme, Opera GX) el fondo se ve mal, como se ve en la imagen no se llena todo el fondo de blanco y si bajo esta todo con azul
 
-4. Intento de arreglo de cuadro mal hecho en seccion "Comparacion Regulatoria"
+**10. Intento de arreglo de cuadro mal hecho en sección "Comparación Regulatoria"**
 
 en la pagina en la seccion de comparacion regulatoria, Comparación de marcos regulatorios aplicables el cuadro esta redactado en markdown modificalo para que se vea como un cuadro
 
-5. Intento 2 de arreglo de cuadro
+**11. Intento 2 de arreglo de cuadro**
 ahora el cuadro se ve asi:
 <table> <thead> <tr> <th>Marco regulatorio</th> <th>Alcance</th> <th>Jurisdicción</th> <th>Sanciones</th> <th>Sujetos regulados</th> <th>Aplicabilidad al caso Sony</th> </tr> </thead> <tbody> <tr> <td><strong>Ley 21.459</strong></td> <td>Delitos informáticos y protección de sistemas</td> <td>Chile</td> <td>Penas privativas de libertad y multas</td> <td>Personas naturales responsables de delitos informáticos</td> <td>Alta aplicabilidad para tipificar acceso ilícito y sabotaje</td> </tr> <tr> <td><strong>Ley 19.628</strong></td> <td>Tratamiento y protección de datos personales</td> <td>Chile</td> <td>Responsabilidad civil y sanciones asociadas</td> <td>Organizaciones que procesan datos personales</td> <td>Aplicable por filtración de datos de empleados</td> </tr> <tr> <td><strong>Convenio de Budapest</strong></td> <td>Cooperación internacional y ciberdelitos</td> <td>Internacional</td> <td>Depende de legislación interna de cada Estado</td> <td>Estados adherentes e investigadores</td> <td>Relevante por carácter transnacional del ataque</td> </tr> <tr> <td><strong>NIST Cybersecurity Framework</strong></td> <td>Gestión de riesgos y controles de seguridad</td> <td>Referencia internacional</td> <td>No establece sanciones penales</td> <td>Organizaciones públicas y privadas</td> <td>Útil para evaluar fallas preventivas y respuesta</td> </tr> <tr> <td><strong>CISA Guidance</strong></td> <td>Recomendaciones técnicas y resiliencia</td> <td>Estados Unidos / referencia internacional</td> <td>No posee sanciones directas</td> <td>Infraestructura crítica y organizaciones</td> <td>Relevante para mitigación de malware destructivo</td> </tr> </tbody> </table>
+
+**12. Consulta sobre Vercel y contenido no visible**
+Por que al hacer deploy a mi proyecto en vercel el contenido del informe no se ve, genera instrucciones para dar a copilo y que modifique el proyecto con la solucion, debes explicar por que podria estar fallando, por que y como implementar la solucion. Entrega las instrucciones en formato markdo
