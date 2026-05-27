@@ -6,7 +6,7 @@
   background-color: #ffffff;
   transition: margin-left 0.3s ease;
   overflow-y: auto;
-  overflow-x: hidden;
+  overflow-x: auto;
 }
 
 .document-container {
@@ -243,7 +243,10 @@
 
 @media (max-width: 640px) {
   .document-container {
+    max-width: 100%;
     padding: 1.5rem 1rem;
+    width: 100%;
+    box-sizing: border-box;
   }
 
   .document-title {
@@ -253,6 +256,7 @@
   .markdown-pre {
     padding: 1rem;
     font-size: 0.8rem;
+    overflow-x: auto;
   }
 
   .markdown-table {
@@ -262,6 +266,10 @@
   .markdown-th,
   .markdown-td {
     padding: 0.5rem;
+  }
+
+  .document-viewer {
+    overflow-x: auto;
   }
 }
 
