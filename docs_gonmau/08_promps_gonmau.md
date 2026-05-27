@@ -280,8 +280,60 @@ en el navegador abierto en VS Code el informe se ve bien, pero al abrirlo en otr
 en la pagina en la seccion de comparacion regulatoria, Comparación de marcos regulatorios aplicables el cuadro esta redactado en markdown modificalo para que se vea como un cuadro
 
 **11. Intento 2 de arreglo de cuadro**
+
 ahora el cuadro se ve asi:
 <table> <thead> <tr> <th>Marco regulatorio</th> <th>Alcance</th> <th>Jurisdicción</th> <th>Sanciones</th> <th>Sujetos regulados</th> <th>Aplicabilidad al caso Sony</th> </tr> </thead> <tbody> <tr> <td><strong>Ley 21.459</strong></td> <td>Delitos informáticos y protección de sistemas</td> <td>Chile</td> <td>Penas privativas de libertad y multas</td> <td>Personas naturales responsables de delitos informáticos</td> <td>Alta aplicabilidad para tipificar acceso ilícito y sabotaje</td> </tr> <tr> <td><strong>Ley 19.628</strong></td> <td>Tratamiento y protección de datos personales</td> <td>Chile</td> <td>Responsabilidad civil y sanciones asociadas</td> <td>Organizaciones que procesan datos personales</td> <td>Aplicable por filtración de datos de empleados</td> </tr> <tr> <td><strong>Convenio de Budapest</strong></td> <td>Cooperación internacional y ciberdelitos</td> <td>Internacional</td> <td>Depende de legislación interna de cada Estado</td> <td>Estados adherentes e investigadores</td> <td>Relevante por carácter transnacional del ataque</td> </tr> <tr> <td><strong>NIST Cybersecurity Framework</strong></td> <td>Gestión de riesgos y controles de seguridad</td> <td>Referencia internacional</td> <td>No establece sanciones penales</td> <td>Organizaciones públicas y privadas</td> <td>Útil para evaluar fallas preventivas y respuesta</td> </tr> <tr> <td><strong>CISA Guidance</strong></td> <td>Recomendaciones técnicas y resiliencia</td> <td>Estados Unidos / referencia internacional</td> <td>No posee sanciones directas</td> <td>Infraestructura crítica y organizaciones</td> <td>Relevante para mitigación de malware destructivo</td> </tr> </tbody> </table>
 
 **12. Consulta sobre Vercel y contenido no visible**
-Por que al hacer deploy a mi proyecto en vercel el contenido del informe no se ve, genera instrucciones para dar a copilo y que modifique el proyecto con la solucion, debes explicar por que podria estar fallando, por que y como implementar la solucion. Entrega las instrucciones en formato markdo
+Por que al hacer deploy a mi proyecto en vercel el contenido del informe no se ve, genera instrucciones para dar a copilo y que modifique el proyecto con la solucion, debes explicar por que podria estar fallando, por que y como implementar la solucion. Entrega las instrucciones en formato markdown
+
+**13. Crear Footer**
+
+Crea un componente Footer moderno y responsive para un proyecto hecho con React + Vite + Tailwind CSS.
+
+Requisitos:
+- Usar Tailwind CSS
+- Diseño limpio y profesional
+- Responsive para móvil y desktop
+- Footer con fondo oscuro y buen contraste
+- Agregar separación/padding adecuados
+- Centrar correctamente el contenido
+
+El footer debe incluir:
+
+1. Texto:
+"Desarrollado por: Mauro Gonzalez"
+
+2. Un botón estilizado que redirija a:
+https://github.com/Koritz14
+
+Requisitos del botón:
+- Abrir en una nueva pestaña
+- Tener hover animation
+- Usar un icono de GitHub si es posible
+- Texto: "GitHub"
+
+3. Copyright dinámico:
+© [año actual] Todos los derechos reservados.
+
+El año debe obtenerse automáticamente con JavaScript.
+
+4. Tecnologías usadas:
+"React + Vite + Tailwind CSS"
+
+Extras:
+- Usar flex/grid correctamente
+- Agregar una pequeña línea divisora superior
+- Mantener buena jerarquía visual
+- Evitar que el footer se vea vacío
+- Crear el componente en:
+src/components/Footer.jsx
+
+Además:
+- Mostrar cómo importarlo y usarlo en App.jsx
+- Usar buenas prácticas de React
+- Mantener el código limpio y reutilizable
+
+**14. Modificacion README.md**
+
+Modifica el archivo README.md con la informacion sobre el proyecto
