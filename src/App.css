@@ -2,11 +2,8 @@
 .app-layout {
   display: flex !important;
   width: 100% !important;
-  height: 100% !important;
-  min-height: 100vh !important;
+  flex-grow: 1;
   background-color: #ffffff !important;
-  flex-shrink: 0;
-  overflow: hidden;
   flex-direction: row;
 }
 
