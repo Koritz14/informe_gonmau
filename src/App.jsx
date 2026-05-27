@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { Sidebar } from './components/Sidebar'
 import { DocumentViewer } from './components/DocumentViewer'
+import { Footer } from './components/Footer'
 import { DOCS_CONFIG } from './config/docs'
 import './App.css'
 
@@ -21,9 +22,12 @@ function App() {
   }
 
   return (
-    <div className="app-layout">
-      <Sidebar activeDocId={activeDocId} onDocSelect={handleDocSelect} />
-      <DocumentViewer fileName={activeFileName} title={activeTitle} />
+    <div className="flex flex-col min-h-screen">
+      <div className="app-layout flex-1">
+        <Sidebar activeDocId={activeDocId} onDocSelect={handleDocSelect} />
+        <DocumentViewer fileName={activeFileName} title={activeTitle} />
+      </div>
+      <Footer />
     </div>
   )
 }
