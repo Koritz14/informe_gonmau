@@ -55,40 +55,14 @@ body {
   width: 100%;
   height: auto;
   min-height: 100vh;
+  background-color: #ffffff !important;
 }
 
 #root {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-}
-}
-
-html {
-  width: 100% !important;
-  height: 100% !important;
-  margin: 0 !important;
-  padding: 0 !important;
   background-color: #ffffff !important;
-  overflow: hidden;
-}
-
-body {
-  width: 100% !important;
-  height: 100% !important;
-  margin: 0 !important;
-  padding: 0 !important;
-  background-color: #ffffff !important;
-  overflow: hidden;
-}
-
-#root {
-  width: 100% !important;
-  height: 100% !important;
-  min-height: 100vh !important;
-  display: flex !important;
-  background-color: #ffffff !important;
-  flex-shrink: 0;
 }
 
 h1,
